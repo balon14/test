@@ -14,16 +14,6 @@ name = st.text_input("Enter your name", "")
 st.write(f"Hello {name}!")
 
 
-def lang_detection(input_text):
-    try:
-        detected_text = detect(input_text)
-        if detected_text != 'ru':
-            st.error("Язык введенного текста не русский! Попробуйте ввести \
-                текст еще раз.")
-            return "Язык введенного текста не русский! " + \
-                "Попробуйте ввести текст еще раз."
-
-
 @st.cache(allow_output_mutation=True)
 def load_model():
     return EfficientNetB0(weights='imagenet')
