@@ -5,9 +5,6 @@ import numpy as np
 from tensorflow.keras.applications import EfficientNetB0
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.applications.efficientnet import preprocess_input, decode_predictions
-from langdetect import detect
-from langdetect.lang_detect_exception import LangDetectException
-import string
 
 
 name = st.text_input("Enter your name", "")
