@@ -2,6 +2,9 @@ import io
 import streamlit as st
 from PIL import Image
 import numpy as np
+from transformers import YolosImageProcessor, YolosForObjectDetection
+import torch
+import requests
 
 
 name = st.text_input("Enter your name", "")
